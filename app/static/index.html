@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PocketSmart AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header><h1>PocketSmart AI</h1><button id="logout" hidden>Log out</button></header>
+
+<main id="auth">
+  <h2>Spend smarter on what you're planning</h2>
+  <p>Set a budget for home decor, an event or jewelry, then get AI picks that fit it.</p>
+  <div class="row"><input id="name" placeholder="Name (sign up only)"><input id="email" type="email" placeholder="Email"><input id="password" type="password" placeholder="Password">
+  <button id="login">Log in</button><button id="register" class="ghost">Sign up</button></div>
+  <p id="authMsg" class="msg"></p>
+</main>
+
+<main id="dash" hidden>
+  <p>Hi <b id="who"></b></p>
+  <section><h3>Your budgets</h3>
+    <div class="row"><input id="bCat" list="cats" placeholder="Category"><input id="bLimit" type="number" placeholder="Limit (INR)"><button id="saveBudget">Save budget</button></div>
+    <datalist id="cats"><option>Home Decor</option><option>Event Planning</option><option>Jewelry Shopping</option><option>Groceries</option></datalist>
+    <div id="summary"></div></section>
+  <section><h3>Add an expense</h3>
+    <div class="row"><input id="eCat" list="cats" placeholder="Category"><input id="eTitle" placeholder="What did you buy?"><input id="eAmt" type="number" placeholder="Amount"><button id="addExp">Add expense</button></div>
+    <ul id="expenses"></ul></section>
+  <section><h3>Get recommendations</h3>
+    <div class="row"><input id="rCat" list="cats" placeholder="Category"><input id="rBudget" type="number" placeholder="Budget (INR)"><input id="rDet" placeholder="Taste, occasion, city..."><button id="ask">Recommend</button></div>
+    <div id="answer"></div></section>
+</main>
+<script src="/static/js/app.js"></script>
+</body>
+</html>
